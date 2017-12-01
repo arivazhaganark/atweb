@@ -141,7 +141,8 @@ class RegisterController extends Controller
                 'phone' => $input['phone'],
                 'location' => $input['location'],
                 'customer_notification' => $input['optradio'],
-                'status' => 'N'
+                'status' => 'N',
+                'address' => $input['address']
             );
         }
 

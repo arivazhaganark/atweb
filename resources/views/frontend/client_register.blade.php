@@ -32,6 +32,12 @@
            </div>
         </div> 
         <div class="form-group">
+           <label class="control-label col-sm-4" for="address">Address</label>
+           <div class="col-sm-7"> 
+               <textarea name="address" id="address" class="form-control" placeholder="Address"></textarea>
+           </div>
+        </div>
+        <div class="form-group">
            <label class="control-label col-sm-4" for="location">Location <span class="color-red">*</span></label>
            <div class="col-sm-7"> 
               <input type="text" class="form-control" name="location" id="location" placeholder="Enter Location">
