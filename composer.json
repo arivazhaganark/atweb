@@ -9,7 +9,8 @@
         "laravel/framework": "5.3.*",
         "intervention/image": "dev-master",
         "anhskohbo/no-captcha": "^2.1",
-        "fedeisas/laravel-mail-css-inliner": "^2.2"
+        "fedeisas/laravel-mail-css-inliner": "^2.2",
+        "doctrine/dbal": "^2.5"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

@@ -13,7 +13,7 @@
       </div>
       <div class="clearfix"></div>
       <div class="form-group mb-0">
-         <label class="control-label col-sm-5">Demo at <span class="text-red">*</span></label>
+         <label class="control-label col-sm-5">Demo at</label>
          <div class="col-sm-6 mb-1">
             <input type="radio" name="demo_at" id="demo_at" value="At your site"> At your site &nbsp;&nbsp;
             <input type="radio" name="demo_at" id="demo_at" value="Visit our customer site"> Visit our customer site
@@ -35,14 +35,21 @@
       </div>
       <div class="clearfix"></div>
       <div class="form-group mb-0">
-         <label class="control-label col-sm-5">Preferred Demo Date<span class="text-red">*</span></label>
+         <label class="control-label col-sm-5">Preferred Date<span class="text-red">*</span></label>
          <div class="col-sm-6 mb-1">
             <input name="demo_date" id="demo_date" type="text" class="form-control" placeholder="Date"/>
          </div>
       </div>
       <div class="clearfix"></div>
       <div class="form-group mb-0">
-         <label class="control-label col-sm-5">Demo Time<span class="text-red">*</span></label>
+         <label class="control-label col-sm-5">Alternate Date</label>
+         <div class="col-sm-6 mb-1">
+            <input name="alt_date" id="alt_date" type="text" class="form-control" placeholder="Date"/>
+         </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-group mb-0">
+         <label class="control-label col-sm-5">Time<span class="text-red">*</span></label>
          <div class="col-sm-6 mb-1">
             <input name="demo_time" id="demo_time" type="text" class="form-control timepicker" value="" placeholder="Demo Time"/>
          </div>
@@ -68,8 +75,8 @@
             <label class="radio-inline"><input type="radio" name="optradio" value="no">No</label>
          </div>
       </div>
-       <div class="clearfix"></div>
-      <div class="form-group mb-0">
+       <!--<div class="clearfix"></div>-->
+<!--      <div class="form-group mb-0">
          <label class="control-label col-sm-5">Segment<span class="text-red">*</span></label>
          <div class="col-sm-6 mb-1">
             <select class="form-control" id="segment" name="segment">
@@ -85,7 +92,7 @@
                <option value="individualusers">Individual Users </option>
             </select>
          </div>
-      </div>
+      </div>-->
       <div class="clearfix"></div>
       <div class="form-group mb-0">
          <label class="control-label col-sm-5">Demo On<span class="text-red">*</span></label>
@@ -158,6 +165,9 @@
 <script src="{{ asset('js/pagejs/demo_request.js?v=2.1') }}"></script>
 <script>
 	datepickr('#demo_date', { dateFormat: 'd-m-Y' });
+</script>
+<script>
+	datepickr('#alt_date', { dateFormat: 'd-m-Y' });
 </script>
 <link rel="stylesheet" href="{{ asset('assets/css/wickedpicker.min.css') }}">
 <script type="text/javascript" src="{{ asset('assets/js/wickedpicker.min.js') }}"></script>
