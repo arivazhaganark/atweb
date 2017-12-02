@@ -28,19 +28,37 @@
       </div>
       <div class="form-group">
          <label class="control-label col-sm-4" for="products">Opportunity/Products<span class="color-red">*</span></label>
-         <div class="col-sm-7 mb-1"><input id="products" class="form-control" name="products" type="text" placeholder="Enter Opportunity/Products" /></div>
+         <div class="col-sm-7 mb-1">
+         <select class="form-control" name="products" id="products">
+             <option value="">Select</option> 
+            @foreach ($products as $product)
+                <option value="{{$product}}">{{$product}}</option>
+            @endforeach
+            </select> </div>
       </div>
       <div class="form-group">
          <label class="control-label col-sm-4" for="application">Application</label>
-         <div class="col-sm-7 mb-1"><input id="application" class="form-control" name="application" type="text" placeholder="Enter Application" /></div>
+         <div class="col-sm-7 mb-1">
+         <select class="form-control" name="application" id="application">
+             <option value="">Select</option> 
+            @foreach ($applications as $application)
+                <option value="{{$application}}">{{$application}}</option>
+            @endforeach
+            </select> </div>
       </div>
       <div class="form-group">
-         <label class="control-label col-sm-4" for="ovalue">Opportunity value<span class="color-red">*</span></label>
+         <label class="control-label col-sm-4" for="ovalue">Opportunity value(approx)<span class="color-red">*</span></label>
          <div class="col-sm-7 mb-1"><input id="ovalue" class="form-control" name="ovalue" type="text" placeholder="Enter Opportunity value" /></div>
       </div>
       <div class="form-group">
-         <label class="control-label col-sm-4" for="tender">Tender or private<span class="color-red">*</span></label>
-         <div class="col-sm-7 mb-1"><input id="tender" class="form-control" name="tender" type="text" placeholder="Enter Tender or private" /></div>
+         <label class="control-label col-sm-4" for="tender">Make<span class="color-red">*</span></label>
+         <div class="col-sm-7 mb-1">
+         <select class="form-control" name="tender" id="tender">
+             <option value="">Select</option> 
+            @foreach ($tenders as $tender)
+                <option value="{{$tender}}">{{$tender}}</option>
+            @endforeach
+            </select> </div>
       </div>
      <div class="form-group">
          <label class="control-label col-sm-4" for="closing">Expected Closing date<span class="color-red">*</span></label>

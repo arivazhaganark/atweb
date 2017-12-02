@@ -51,7 +51,11 @@ class UserController extends Controller
     {        
         $user_id = Auth::guard('user')->user()->id;
         $deal_reg = Deal_register::where('user_id', $user_id)->where('status', 1)->get();
-        return view('frontend.dashboard', compact('deal_reg'));        
+        $products = Deal_register::products();
+        $applications = Deal_register::applications();
+        $tenders = Deal_register::tenders();
+
+        return view('frontend.dashboard', compact('deal_reg','products','applications','tenders'));        
     }
 
     public function change_password()
@@ -223,10 +227,10 @@ class UserController extends Controller
         $user = User::where('id', Auth::guard('user')->user()->id)->first();
         $deal_user_email = $inputs['emailid'];
         Mail::to($deal_user_email)->queue(new DealRegisterUser);
-
+                
         Session::flash('message', 'This deal has been registered successfully.');
         Session::flash('alert-class', 'alert-success');
-        return Redirect::to('/user/dashboard');
+        return Redirect::to('/user/dashboard');        
     }
 
     //deal registration email exists verify
