@@ -2,6 +2,12 @@
 <form id="demo_feedback" name="demo_feedback" method="POST" action="{{ url('demo_feedback/save') }}" onsubmit="return false;" novalidate="novalidate">
    {{ csrf_field() }}          
    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+       <div class="form-group">
+         <label class="control-label col-sm-5" for="name">End Customer Name</label>
+         <div class="col-sm-6 mb-1">
+            <input type="text" class="form-control" id="end_customer_name" placeholder="Enter End Customer" name="end_customer_name">
+         </div>
+      </div>
       <div class="form-group">
          <label class="control-label col-sm-5" for="name">Company Name <span class="text-red">*</span></label>
          <div class="col-sm-6 mb-1">

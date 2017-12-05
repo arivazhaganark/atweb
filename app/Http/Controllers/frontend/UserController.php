@@ -446,6 +446,7 @@ class UserController extends Controller
         $user_id = Auth::guard('user')->user()->id;
         $data = array(
             'user_id' => $user_id,
+            'end_customer_name' => $input['end_customer_name'],
             'companyname' => $input['companyname'],
             'location' => $input['location'],
             'person_in_charge' => $input['person_in_charge'],
